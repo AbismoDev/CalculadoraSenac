@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*DEPOIS REMOVER O BACKGROUND DA CALCULADORA, FAZER UM EFEITO DE GLASS E NO BODY COLOCAR UMA FOTO MATEMATICA, PODE SER UM GIF MATRIX*/
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../img/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.calculadora-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  border-radius: 20px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border: 1px solid #ccc;
+  /* background-color: rgb(2,0,36); */
+  /* box-shadow: 0 0 15px 3px rgba(6,6,129,1); */
+}
+
+.calculadora-resultado {
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 40px;
+  border: 2px solid rgb(44, 43, 77);
+  background-color: rgb(50, 48, 75);
+  box-shadow: 0 0 15px 3px rgb(28, 27, 44) inset;
+}
+
+.calculadora-teclado {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.calculadora-teclado-funcoes {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.calculadora-teclado-container {
+  display: flex;
+}
+
+.calculadora-teclado-numeros {
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.calculadora-teclado-operadores {
+  width: 20%;
+  display: flex;
+  gap: 4px;
+  padding-left: 6px;
+  flex-direction: column;
+}
+
+.calculadora-teclado-operadores .btn {
+  width: 100%;
+}
+
+.btn {
+  width: calc(30% - 20px);
+  font-size: 18px;
+  font-weight: bold;
+  /* color: rgb(2,0,36); */
+  color: white;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-grow: 1;
+  background-color: rgb(2, 0, 36);
+  box-shadow: 0 0 2px 1px rgb(48, 46, 88) inset;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
